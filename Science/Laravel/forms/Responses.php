@@ -1,0 +1,739 @@
+<?php
+
+
+$Author="Ashutosh Kumar Choubey";
+
+
+$Description="Laravel is The PHP framework for web artisans.Well organized,Simple learning ,Free Laravel Tutorial and easy to understand.This is the chapter of Laravel  Responses";
+
+
+$Keywords="Attaching Headers To Responses,Attaching Cookies To Responses,>Other Response Types,View Responses,JSON Responses,File Downloads,Redirects
+
+
+,Redirecting To Named Routes,Redirecting To Controller Actions,Redirecting With Flashed Session Data,Response Macros";
+
+
+$Contents='Responses';
+
+
+ require "IndexRelated/indexUpper.php";
+
+
+?>
+
+
+        		
+
+
+                                       <!-- Start from Here -->
+
+
+<article>
+
+
+		<h1 align="center" >Responses</h1>
+
+
+<ul>
+
+
+<li class="PointTutorials"><a href="#basic-responses">Basic Responses</a>
+
+
+<ul>
+
+
+<li class="PointTutorials"><a href="#attaching-headers-to-responses">Attaching Headers To Responses</a></li>
+
+
+<li class="PointTutorials"><a href="#attaching-cookies-to-responses">Attaching Cookies To Responses</a></li>
+
+
+</ul></li>
+
+
+<li class="PointTutorials"><a href="#other-response-types">Other Response Types</a>
+
+
+<ul>
+
+
+<li class="PointTutorials"><a href="#view-responses">View Responses</a></li>
+
+
+<li class="PointTutorials"><a href="#json-responses">JSON Responses</a></li>
+
+
+<li class="PointTutorials"><a href="#file-downloads">File Downloads</a></li>
+
+
+</ul></li>
+
+
+<li class="PointTutorials"><a href="#redirects">Redirects</a>
+
+
+<ul>
+
+
+<li class="PointTutorials"><a href="#redirecting-named-routes">Redirecting To Named Routes</a></li>
+
+
+<li class="PointTutorials"><a href="#redirecting-controller-actions">Redirecting To Controller Actions</a></li>
+
+
+<li class="PointTutorials"><a href="#redirecting-with-flashed-session-data">Redirecting With Flashed Session Data</a></li>
+
+
+</ul></li>
+
+
+<li class="PointTutorials"><a href="#response-macros">Response Macros</a></li>
+
+
+</ul>
+
+
+<p class="paragraph"><a name="basic-responses"></a></p>
+
+
+<h2>Basic Responses</h2>
+
+
+<p class="paragraph">Of course, all routes and controllers should return some sort of reaction to be sent back to the user's program. Laravel gives a few distinctive approaches to return reactions. The most basic reaction is just returning a string from a route or controller:</p>
+
+
+<pre class="PreTag"><code>Route::get('/', function () {
+
+
+    return 'Hello World';
+
+
+});</code></pre>
+
+
+<p class="paragraph">The given string will consequently be changed over into a HTTP reaction by the framework.</p> 
+
+
+
+
+
+<p class="paragraph">However, for most routes and controller actions, you will return a full <code>Illuminate\Http\Response</code> case or a view. Returning a full <code>Response</code> case enables you to modify the reaction's HTTP status code and headers. A <code>Response</code> case acquires from the <code>Symfony\Component\HttpFoundation\Response</code> class, giving an assortment of methods to building HTTP responses:</p>
+
+
+<pre class="PreTag"><code>use Illuminate\Http\Response;
+
+
+
+
+
+Route::get('home', function () {
+
+
+    return (new Response($content, $status))
+
+
+                  -&gt;header('Content-Type', $value);
+
+
+});</code></pre>
+
+
+<p class="paragraph">For convenience, you may also use the <code>response</code> helper:</p>
+
+
+<pre class="PreTag"><code>Route::get('home', function () {
+
+
+    return response($content, $status)
+
+
+                  -&gt;header('Content-Type', $value);
+
+
+});</code></pre>
+
+
+<blockquote>
+
+
+</blockquote>
+
+
+<p class="paragraph"><a name="attaching-headers-to-responses"></a></p>
+
+
+<h4>Attaching Headers To Responses</h4>
+
+
+<p class="paragraph">Keep at the top of the priority list that most reaction methods are chainable, taking into account the familiar working of reactions. For instance, you may use the <code>header</code> method to add a progression of headers to the reaction before sending it back to the user:</p>
+
+
+<pre class="PreTag"><code>return response($content)
+
+
+            -&gt;header('Content-Type', $type)
+
+
+            -&gt;header('X-Header-One', 'Header Value')
+
+
+            -&gt;header('X-Header-Two', 'Header Value');</code></pre>
+
+
+<p class="paragraph"><a name="attaching-cookies-to-responses"></a></p>
+
+
+<h4>Attaching Cookies To Responses</h4>
+
+
+<p class="paragraph">The <code>withCookie</code> assistant method on the reaction example enables you to easily join treats to the reaction. For instance, you may use the <code>withCookie</code> method to generate a treat and append it to the reaction instance:</p>
+
+
+<pre class="PreTag"><code>return response($content)-&gt;header('Content-Type', $type)
+
+
+                 -&gt;withCookie('name', 'value');</code></pre>
+
+
+<p class="paragraph">The <code>withCookie</code> method accepts additional optional arguments which allow you to further customize your cookie's properties:</p>
+
+
+<pre class="PreTag"><code>-&gt;withCookie($name, $value, $minutes, $path, $domain, $secure, $httpOnly)</code></pre>
+
+
+<p class="paragraph">By default, all treats generated by Laravel are encoded and marked with the goal that they can't be changed or perused by the customer. On the off chance that you might want to incapacitate encryption for a specific subset of treats generated by your application, you may use the <code>$except</code> property of the <code>App\Http\Middleware\EncryptCookies</code> middleware:</p>
+
+
+<pre class="PreTag"><code>/**
+
+
+ * The names of the cookies that should not be encrypted.
+
+
+ *
+
+
+ * @var array
+
+
+ */
+
+
+protected $except = [
+
+
+    'cookie_name',
+
+
+];</code></pre>
+
+
+<p class="paragraph"><a name="other-response-types"></a></p>
+
+
+<h2>Other Response Types</h2>
+
+
+<p class="paragraph">The <code>response</code> partner might be used to helpfully generate different sorts of reaction cases. At the point when the <code>response</code> assistant is called without arguments, a usage of the <code>Illuminate\Contracts\Routing\ResponseFactory</code> contract is returned. This agreement gives a few supportive methods to creating responses.</p>
+
+
+<p class="paragraph"><a name="view-responses"></a></p>
+
+
+<h4>View Responses</h4>
+
+
+<p class="paragraph">
+
+
+ If you need to control the response status and headers, it should also be done
+
+
+    You can use the <code> view </code> method to response content:
+
+
+ </p>
+
+
+<pre class="PreTag"><code>return response()-&gt;view('hello', $data)-&gt;header('Content-Type', $type);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="paragraph">Of course, on the off chance that you don't have to pass a custom HTTP status code or custom headers, you may basically use the worldwide <code>view</code> aide function.</p> 
+
+
+
+
+
+<p class="paragraph"><a name="json-responses"></a></p> 
+
+
+
+
+
+<h4>JSON Responses</h4> 
+
+
+
+
+
+<p class="paragraph">The <code>json</code> method will consequently set the <code>Content-Type</code> header to <code>application/json</code>, as well as change over the given array into JSON utilizing the <code>json_encode</code> PHP function:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return reaction()- &gt;json(['name' =&gt; 'Abigail', 'state' =&gt; 'CA']);</code></pre> 
+
+
+
+
+
+<p class="paragraph">If you might want to make a JSONP reaction, you may use the <code>json</code> method notwithstanding <code>setCallback</code>:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return reaction()- &gt;json(['name' =&gt; 'Abigail', 'state' =&gt; 'CA']) 
+
+
+
+
+
+- &gt;setCallback($request-&gt;input('callback'));</code></pre> 
+
+
+
+
+
+<p class="paragraph"><a name="file-downloads"></a></p> 
+
+
+
+
+
+<h4>File Downloads</h4> 
+
+
+
+
+
+<p class="paragraph">The <code>download</code> method might be used to generate a reaction that powers the user's program to download the file at the given way. The <code>download</code> method acknowledges a file name as the second argument to the method, which will decide the file name that is seen by the user downloading the file. At last, you may pass an array of HTTP headers as the third argument to the method:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return reaction()- &gt;download($pathToFile); 
+
+
+
+
+
+return reaction()- &gt;download($pathToFile, $name, $headers);</code></pre> 
+
+
+
+
+
+<blockquote> 
+
+
+
+
+
+<p class="paragraph"><strong>Note:</strong> Symfony HttpFoundation, which oversees file downloads, requires the file being downloaded to have an ASCII file name.</p> 
+
+
+
+
+
+</blockquote> 
+
+
+
+
+
+<p class="paragraph"><a name="redirects"></a></p> 
+
+
+
+
+
+<h2>Redirects</h2> 
+
+
+
+
+
+<p class="paragraph">Redirect reactions are cases of the <code>Illuminate\Http\RedirectResponse</code> class, and contain the correct headers expected to divert the user to another URL. There are a few approaches to generate a <code>RedirectResponse</code> example. The least complex method is to use the worldwide <code>redirect</code> partner method:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>Route::get('dashboard', function () { 
+
+
+
+
+
+return redirect('home/dashboard'); 
+
+
+
+
+
+});</code></pre> 
+
+
+
+
+
+<p class="paragraph">Sometimes you may wish to divert the user to their past location, for instance, after a shape accommodation that is invalid. You may do as such by utilizing the worldwide <code>back</code> aide function:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>Route::post('user/profile', function () { 
+
+
+
+
+
+/Validate the request... 
+
+
+
+
+
+return back()- &gt;withInput(); 
+
+
+
+
+
+});</code></pre> 
+
+
+
+
+
+<p class="paragraph"><a name="redirecting-named-routes"></a></p> 
+
+
+
+
+
+<h4>Redirecting To Named Routes</h4> 
+
+
+
+
+
+<p class="paragraph">When you call the <code>redirect</code> assistant without any parameters, a case of <code>Illuminate\Routing\Redirector</code> is returned, enabling you to call any method on the <code>Redirector</code> occasion. For instance, to generate a <code>RedirectResponse</code> to a named route, you may use the <code>route</code> method:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return divert()- &gt;route('login');</code></pre> 
+
+
+
+
+
+<p class="paragraph">If your route has parameters, you may pass them as the second argument to the <code>route</code> method:</p>
+
+
+<pre class="PreTag"><code>// For a route with the following URI: profile/{id}
+
+
+
+
+
+return redirect()-&gt;route('profile', [1]);</code></pre>
+
+
+<p class="paragraph">If you are diverting to a route with a &quot;ID&quot; parameter that is being populated from an Eloquent model, you may basically pass the model itself. The ID will be separated automatically:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return divert()- &gt;route('profile', [$user]);</code></pre> 
+
+
+
+
+
+<p class="paragraph"><a name="redirecting-controller-actions"></a></p> 
+
+
+
+
+
+<h4>Redirecting To Controller Actions</h4> 
+
+
+
+
+
+<p class="paragraph">You may likewise generate sidetracks to <a href="/docs/5.1/controllers">controller actions</a>. To do as such, just pass the controller and activity name to the <code>action</code> method. Keep in mind, you don't have to indicate the full namespace to the controller since Laravel's <code>RouteServiceProvider</code> will naturally set the default controller namespace:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return divert()- &gt;action('<a href="/cdn-cgi/l/email-security" class="__cf_email__" information cfemail="074f686a624468697375686b6b6275476e6963627f">[email&#160;protected]</a>');</code></pre> 
+
+
+
+
+
+<p class="paragraph">Of course, if your controller route requires parameters, you may pass them as the second argument to the <code>action</code> method:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>return divert()- &gt;action('<a href="/cdn-cgi/l/email-insurance" class="__cf_email__" information cfemail="1144627463527e7f65637e7d7d74635161637e77787d74">[email&#160;protected]</a>', [1]);</code></pre> 
+
+
+
+
+
+<p class="paragraph"><a name="redirecting-with-flashed-session-data"></a></p> 
+
+
+
+
+
+<h4>Redirecting With Flashed Session Data</h4> 
+
+
+
+
+
+<p class="paragraph">Redirecting to another URL and <a href="/docs/5.1/session#flash-data">flashing information to the session</a> are commonly done in the meantime. Thus, for accommodation, you may make a <code>RedirectResponse</code> example <strong>and</strong> flash information to the session in a solitary method chain. This is especially helpful for putting away status messages after an action:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>Route::post('user/profile', function () { 
+
+
+
+
+
+/Update the user's profile... 
+
+
+
+
+
+return redirect('dashboard')- &gt;with('status', 'Profile updated!'); 
+
+
+
+
+
+});</code></pre> 
+
+
+
+
+
+<p class="paragraph">Of course, after the user is diverted to another page, you may retrieve and show the flashed message from the <a href="/docs/5.1/session">session</a>. For instance, utilizing <a href="/docs/5.1/blade">Blade syntax</a>:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>@if (session('status')) 
+
+
+
+
+
+&lt;div class="alert caution success"&gt; 
+
+
+
+
+
+ 
+
+
+
+
+
+&lt;/div&gt; 
+
+
+
+
+
+@endif</code></pre> 
+
+
+
+
+
+<p class="paragraph"><a name="response-macros"></a></p> 
+
+
+
+
+
+<h2>Response Macros</h2> 
+
+
+
+
+
+<p class="paragraph">If you might want to characterize a custom reaction that you can re-use in an assortment of your routes and controllers, you may use the <code>macro</code> method on an execution of <code>Illuminate\Contracts\Routing\ResponseFactory</code>.</p> 
+
+
+
+
+
+<p class="paragraph">For case, from a <a href="/docs/5.1/providers">service provider's</a> <code>boot</code> method:</p> 
+
+
+
+
+
+<pre class="PreTag"><code>&lt;?php 
+
+namespace App\Providers; 
+
+
+
+use Illuminate\Support\ServiceProvider; 
+
+use Illuminate\Contracts\Routing\ResponseFactory; 
+
+
+
+
+
+class ResponseMacroServiceProvider extends ServiceProvider 
+
+{ 
+/** 
+
+
+* Perform post-enlistment booting of administrations. 
+
+
+
+* 
+
+* @param ResponseFactory $factory 
+
+
+* @return void 
+
+*/ 
+
+
+open function boot(ResponseFactory $factory) 
+
+
+{ 
+
+
+$factory-&gt;macro('caps', function ($value) use ($factory) { 
+
+return $factory-&gt;make(strtoupper($value)); 
+}); 
+} 
+}</code></pre> 
+
+
+
+
+
+<p class="paragraph">The <code>macro</code> function acknowledges a name as its first argument, and a Closure as its second. The large scale's Closure will be executed when calling the full scale name from a <code>ResponseFactory</code> usage or the <code>response</code> helper:</p>
+
+
+<pre class="PreTag"><code>return response()-&gt;caps('foo');</code></pre>
+
+
+	</article>
+
+
+                                <!--Work section End -->
+
+
+                                <!--------------------------------------->
+
+
+        	
+
+
+        	
+
+
+<?php
+
+
+  require "IndexRelated/indexLower.php";
+
+
+?>   
+
+
+<script language="javascript" type="text/javascript">
+
+
+	/////////////////////////////////////////////////////////////Start Client SIDE CODE //////////////////////////////////////////////////////////
+
+
+
+
+
+    /////////////////////////////////////////////////////////////End Client SIDE CODE //////////////////////////////////////////////////////////
+
+
+</script>
+
+
+</html>

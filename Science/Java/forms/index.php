@@ -1,0 +1,54 @@
+<?php
+$Description="Well organized,Simple learning  and easy to understand Java Tutorial.This is the chapter of  Introduction";
+$Keywords="Java,History of java,Object Oriented,Platform Independent, Secure,Simple, Portable,Robust, Interpreted, Multithreaded,
+ High Performance";
+
+$Title="Java Introduction";
+$Contents='JavaTutorial';
+require "IndexRelated/indexUpper.php";
+?>
+        	
+                                       <!-- Start from Here -->
+                                       <!--------------------------------------->
+                      <h2 align='center'>Introduction</h2>
+                      <p style="float: right; color:#430383 ;"><a href="JavaTutorialBasicSyntax.php">Next Page-&gt;&gt;</a></p> <br/> 
+                      <p><b style="font-size: 20px; color: #2F0422;">History-: </b>
+                          Java language Developed  by James Gosling with 5 friends(James Gosling, Patrick Naughton, Mike Sheridan, Chris Warth ,Ed Frank.
+                            ) in  1991 for use in one of his many  projects.
+                           This language was origininally called 'Oak' and then it was name 'Green'
+                           and ended up later being renamed as Java.
+                       </p>
+                      <p>
+                        <b style="font-size: 20px; color: #2F0422;">Tools-: </b>The examples which is discussed in this tutorial, you will need Minimum  Pentium 200 MHz computer with a minimum of 128 MB of RAM .
+                         <br/>You will also need the following softwares:<br/>
+                        <b style="font-size: 20px; color: blueviolet;">1&minus;&gt; </b>Linux 7.1 or Windows xp/7/8/10 operating system<br/>
+                        <b style="font-size: 20px; color: blueviolet;">2&minus;&gt; </b> Java JDK 8<br/>
+                        <b style="font-size: 20px; color: blueviolet;">3&minus;&gt; </b> Microsoft Notepad or any other text editor<br/>
+                       </p>
+                        <p><b style="font-size: 20px; color: #2F0422;"> What is Java:</b>
+<br/><li style="font-size: 15px; color: #8A470B;"> </b><b style="font-size: 17px; color: #33023D">Object Oriented:</b>Everything is an Object In Java. It can be easily extended since it is based on the Object orianted Model.
+</li><br/><li style="font-size: 15px; color: #8A470B"> <b style="font-size: 17px; color: #2F0422;"> Platform Independent:</b>Java is the first  Language which is Platform Independent because used both compiler and Interpreter.
+</li><br/><li style="font-size: 15px; color: #8A470B;"> <b style="font-size: 17px; color: #2F0422;"> Secure:</b> Java is very secure Which enables to develop virus-free, tamper-free systems. Here Authentication techniques are based on public-key encryption which makes more secure.
+</li><br/><li style="font-size: 15px; color: #8A470B;"><b style="font-size: 17px; color: #2F0422;"> Simple:</b> Java is Very Simple and to easy to learn. If you understand the basic concept of Object orianted programming , Java would be easy to be a master.
+</li><br/><li style="font-size: 15px; color: #8A470B;"> <b style="font-size: 17px; color: #2F0422;"> Portable:</b>Java Programs can Moved easily  from one computer to another anywhere and anytimes .java is populer programming language on internet which interconnect different kinds of system worldwise
+</li><br/><li style="font-size: 15px; color: #8A470B;"><b style="font-size: 17px; color: #2F0422;"> Robust:</b> is provides many safeguards to ensure reliable code.
+</li><br/><li style="font-size: 15px; color: #8A470B;"> <b style="font-size: 17px; color: #2F0422;"> Interpreted:</b> Java byte code is translated  to  machine instructions and it is not stored anywhere. The development process is very rapid and analytical when it links is an incremental and light-weight process.</li>
+</li><br/><li style="font-size: 15px; color: #8A470B;"> <b style="font-size: 17px; color: #2F0422;"> Multithreaded:</b>That means java compiler handle  muliple tasks simultaniously.
+</li><br/><li style="font-size: 15px; color: #8A470B;"><b style="font-size: 17px; color: #2F0422;"> High Performance:</b> Java gives high performance.</p> 
+<p style="float: right; color:#430383 ;"><a href="JavaTutorialBasicSyntax.php">Next Page-&gt;&gt;</a></p> <br/>
+                       
+                                       
+                                       
+                                <!--Work section End -->
+                                <!--------------------------------------->
+        		
+        	
+<?php
+    require "IndexRelated/indexLower.php";
+?> 
+<script language="javascript" type="text/javascript">
+	/////////////////////////////////////////////////////////////Start Client SIDE CODE //////////////////////////////////////////////////////////
+				
+	/////////////////////////////////////////////////////////////End Client SIDE CODE //////////////////////////////////////////////////////////
+    
+</script>

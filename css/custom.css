@@ -1,0 +1,375 @@
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	}
+.footer-blurb 
+{
+    padding: 30px 0;
+    margin-top: 20px;
+    background-color: #E2E9E9;/*--Footer added start--------------*/
+    color: black;
+   	border-top: 4px solid #9ecde0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+<!--Footer added start-------------->
+.footer-blurb p {
+	margin: 0;
+	padding-top: 20px;
+	line-height: normal;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #444444;
+}
+
+.footer-blurb a {
+	color: #464032;
+}
+ /* <!--Footer added start-------------->  */
+.footer-blurb-item {
+    padding: 20px;
+    }
+ 
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.feature,
+.page-intro,
+.article-intro,
+.small-print {
+	text-align: center;
+	}
+/* Search */
+
+#search {
+	float: right;
+	width: 210px;
+	height: 60px;
+	padding: 20px 0px 0px 0px;
+	background: #FF9767;/* Search Background Color  */
+	border-bottom: 4px solid #FFFFFF;
+}
+
+#search form {
+	height: 41px;
+	margin: 0;
+	padding: 10px 0 0 20px;
+}
+
+#search fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#search-text {
+	width: 125px;
+	padding: 6px 5px 2px 5px;
+	border: none;
+	background: #FFFFFF;
+	text-transform: lowercase;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	color: #464032;
+}
+
+#search-submit {
+	width: 50px;
+	height: 23px;
+	border: 1px solid #05799f;
+	background: #05799f;
+	font-weight: bold;
+	font-size: 10px;
+	color: #FFFFFF;
+}	
+
+/* Search */
+/*--------------Added from Previous Start----------------------------------------------*/
+
+
+
+
+
+@font-face {
+font-family: myFirstFont;
+src: url(/images/PRISTINA.TTF);
+font-weight: bold;
+}
+@font-face{
+font-family: hindi;
+src: url(/font/Devnew.TTF);
+font-weight: bold;
+}
+.heading
+{
+ font-family: myFirstFont;
+ color: white;
+ font-size: 40px;
+}
+.Txt{
+   border-radius: 5px 5px 5px 5px; 
+   border-color: #5D89BF;
+   border: 1px solid #032D5D;
+}
+.PageTextBox
+{
+    background-color:#ffffff; 
+    border-radius:5px; 
+    border:solid #032d5d 1px; 
+    font-family:verdana; 
+    color:#032d5d; 
+    font-size:15px; 
+    padding:3px;
+}
+.addButton{
+    width: 100px;
+	height: 27px;
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#4989F1;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+.addButton:hover{
+    width: 100px;
+	height: 27px;
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#915D08;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+.cancelButton{
+    width: 100px;
+	height: 27px;
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#4989F1;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+.cancelButton:hover{
+    width: 100px;
+	height: 27px;
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#D05353;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+.txtTextBox{
+    width: 550px;
+	height: 50px;
+	background-color:#fffff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-left:10px;
+	color:#000080;
+	font-style:italic;
+	font-weight:bold;
+	font-size:14px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+/*-----------Add Tutorial---------------*/
+.txtTextBoxAddTut{
+   
+	background-color:#fffff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-left:10px;	
+	font-size:14px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+.PlusBtn
+{
+    width: 50px;
+	height: 50px;
+	color:#020621;
+	font-size:25px;
+	background-color:#FF7F26;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1; 
+    
+}
+.ListTutorialBtn
+{
+  width: 25px;
+	height: 25px;
+	color:#020621;
+	font-size:15px;
+	background-color:#FF9767;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;   
+}
+/*-----------Add Tutorial---------------*/
+.sltBox
+{
+    width: 200px;
+	height: 30px;
+	background-color:#fffff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-left:10px;
+	color:#000080;
+	font-style:italic;
+	font-weight:bold;
+	font-size:14px;
+	behavior:url(PIE/PIE.htc);
+	position:relative;
+	zoom:1;
+}
+
+/*----------------------------------*/
+/*-------Tutorial content--------------*/
+.contentTutorial
+{
+	float: right;
+	width: 900px;
+	padding: 30px 0px 0px 0px;
+    color:#000080;
+	font-style:inherit;
+	font-weight:bold;
+	font-size:16px;
+}
+.openLink
+{
+    
+	border: none;
+	height: 15px;
+	text-decoration:underline ;
+	text-align: right;
+    text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: red;
+    font-weight: bolder;
+}
+.TextAreaForTutorial
+{    
+    box-sizing: content-box;    
+    word-wrap: break-word;
+    background-color:#C3DBE2;
+    border-radius: 5px;
+	padding-left:10px;
+	color:#000080;
+	font-weight:;
+	font-size:14px;
+	position:relative;
+    width: 90%;
+    min-height: 300px;
+    overflow-y: scroll;
+    overflow-x: scroll;    
+}
+.PointTutorials
+{
+    font-size: 15px;
+    color: #8A470B;
+    list-style-position: inside;
+    
+    /*/list-style-type: square;*/
+    
+}
+.TutorialSubTitle
+{
+font-size: 20px; 
+color: #2F0422;
+}
+.TutorialNextPagea
+{
+float: right; color:#430383 ;
+}
+.TutorialPreviousPagea
+{
+float: left; color:#430383 ;
+}
+.PointTutorialsTitle
+{
+    font-size: 17px;
+    color: #021A2C
+}
+.example/* useabe*/
+{
+    background-color:#f1f1f1;
+    padding:0.01em 16px;margin:20px 0;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.15),0 2px 10px 0 rgba(0,0,0,0.11)!important
+}
+.Alphabate
+{
+  font-size: 22px;
+    color: #DB5321 ; 
+}
+.CountryOdd
+{
+    font-size: 18px;
+    color: #07288C;
+}
+.CountryEven
+{
+    font-size: 18px;
+    color: #202340;
+}
+.paragraph
+{
+  color: #171719;  
+}
+.PreTag
+{
+  color:#0D183D;  
+}
+/*--------------Added from Previous end--------------------*/
+.TableTdPlant
+{
+   color: #1D0C06; 
+}
+.Title
+{
+    font-size: 22px;
+    color:#1D1209;
+}
+.TableTD2
+{
+   color: #071723; 
+}
+.TableTD3
+{
+   color: #301A05; 
+}
+.TableTD4
+{
+   color:black;
+}

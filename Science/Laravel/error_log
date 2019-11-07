@@ -1,0 +1,64 @@
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/IndexRelated/indexUpper.php on line 25
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Title in /home/ic09df2q9twx/public_html/IndexRelated/SocialMedia.php on line 17
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 25
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 27
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 29
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 31
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 33
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 35
+[02-Mar-2018 06:49:40 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 61
+[02-Mar-2018 06:49:40 UTC] PHP Warning:  require(SocialIndex.html): failed to open stream: No such file or directory in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:49:40 UTC] PHP Fatal error:  require(): Failed opening required 'SocialIndex.html' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:11 UTC] PHP Warning:  require(../../../IndexRelated/indexUpper.php): failed to open stream: No such file or directory in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 5
+[02-Mar-2018 06:50:11 UTC] PHP Fatal error:  require(): Failed opening required '../../../IndexRelated/indexUpper.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 5
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/IndexRelated/indexUpper.php on line 25
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Title in /home/ic09df2q9twx/public_html/IndexRelated/SocialMedia.php on line 17
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 25
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 27
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 29
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 31
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 33
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 35
+[02-Mar-2018 06:50:29 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 61
+[02-Mar-2018 06:50:29 UTC] PHP Warning:  require(SocialIndex.html): failed to open stream: No such file or directory in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:29 UTC] PHP Fatal error:  require(): Failed opening required 'SocialIndex.html' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/IndexRelated/indexUpper.php on line 25
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Title in /home/ic09df2q9twx/public_html/IndexRelated/SocialMedia.php on line 17
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 25
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 27
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 29
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 31
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 33
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 35
+[02-Mar-2018 06:50:34 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 61
+[02-Mar-2018 06:50:34 UTC] PHP Warning:  require(SocialIndex.html): failed to open stream: No such file or directory in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:34 UTC] PHP Fatal error:  require(): Failed opening required 'SocialIndex.html' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/IndexRelated/indexUpper.php on line 7
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Title in /home/ic09df2q9twx/public_html/Science/Laravel/IndexRelated/SocialMedia.php on line 17
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 25
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 27
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 29
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 31
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 33
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 35
+[02-Mar-2018 06:50:59 UTC] PHP Notice:  Undefined variable: Contents in /home/ic09df2q9twx/public_html/IndexRelated/indexLower.php on line 61
+[02-Mar-2018 06:50:59 UTC] PHP Warning:  require(SocialIndex.html): failed to open stream: No such file or directory in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 06:50:59 UTC] PHP Fatal error:  require(): Failed opening required 'SocialIndex.html' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/ic09df2q9twx/public_html/IndexRelated/Footer.php on line 9
+[02-Mar-2018 20:13:15 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[02-Mar-2018 20:13:15 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[02-Mar-2018 20:13:15 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9
+[03-Mar-2018 01:55:54 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[03-Mar-2018 01:55:54 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[03-Mar-2018 01:55:54 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9
+[03-Mar-2018 01:59:57 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[03-Mar-2018 01:59:57 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[03-Mar-2018 01:59:57 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9
+[03-Mar-2018 02:00:53 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[03-Mar-2018 02:00:53 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[03-Mar-2018 02:00:53 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9
+[03-Mar-2018 02:02:27 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[03-Mar-2018 02:02:27 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[03-Mar-2018 02:02:27 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9
+[03-Mar-2018 02:18:50 UTC] PHP Notice:  Undefined variable: Author in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 7
+[03-Mar-2018 02:18:50 UTC] PHP Notice:  Undefined variable: Keywords in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 8
+[03-Mar-2018 02:18:50 UTC] PHP Notice:  Undefined variable: Description in /home/ic09df2q9twx/public_html/Science/Laravel/index.php on line 9

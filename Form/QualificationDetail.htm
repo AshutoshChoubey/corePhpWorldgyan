@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="" />
+
+	<title>Untitled 1</title>
+<link rel='stylesheet'href='css/formStyle.css'/>
+</head>
+
+<body>
+ <div class="header">
+        <table width=100% border=0>
+            <tr  class="lefta">
+                <td bgcolor=#032D5D>&nbsp;</td>
+                <td align="center" ><div class="BHL"><a href="" class="tbar" ><b></b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="location.href='Home.php'" class="tbar" ><b>Home</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="tbar" ><b></b></a></div></td>
+                <td bgcolor=#032D5D>&nbsp;</td>
+            </tr>
+            <tr><td colspan="3" class="font-face" ><h1 align="center" class="heading" >Add Personal Detail</h1></td></tr>
+        </table>
+    </div>
+ 
+  <div>  
+    <table width="100%"   class="centerTable"  cellspan=4>
+    
+            <tr>
+                <td width="18%" valign="top">   
+                    <table bgcolor=#FFFFFF style="height: 500px;" border="0" style="border-color: green;">
+                        <tr><td valign="top" class="lefta"><input type="button" value="Add personal Detail" class="clsbtnLeft"  onclick="location.href='AddPersonalDetail.php'" /></td><td style="width: 5px;"></td><td rowspan="4"class="centerLine"></td></tr>
+                        <tr><td valign="top" class="lefta"><input type="button" value="Update Detail" class="clsbtnLeft" onclick="location.href='UpdateDetail.php'" onclick="changeback()"/></td></tr>
+                        <tr><td valign="top" class="lefta"><input type="button" value="Delete" class="clsbtnLeft" onclick="location.href='Delete.php'" /></td></tr>
+                        <tr><td valign="top"><input type="button" value="Search" class="clsbtnLeft" onclick="location.href='Search.php'"/></td></tr>
+                        <tr><td valign="top"><input type="button" value="Qualification Detail" class="clsbtnLeft" onclick="location.href='Search.php'"/></td></tr>
+                     </table>
+                </td>
+                
+                 <td valign="top"width=80% style="background-color: #EBEBEB;">
+                
+                 <form>
+                     <table border="0" width=100% cellspacing="" cellpading="" valign="top"  >
+                         <tr>
+                             <td style="background-color: #EBEBEB;">
+                             
+                                 <table align="center" valign="top" >        
+                                    <tr>
+                                        <td valign="top">  <strong>Highest Qualification</strong></td>
+                                        <td>:</td>        
+                                        <td>
+                                            <select id="QualifiTable" onchange="unchange()" >
+                                                <option value="" selected="">&lt; select&gt;</option>
+                                                <option value="10" >10th</option>
+                                                <option value="12" >12th/Diploma</option>
+                                                <option value="greduation" >Greduation</option>
+                                                <option value="Postgreduationselect" >Post Greduation</option>
+                                                <option value="HigherQualificationSelect" >Higher Qualification</option>
+                                                
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table><br />        
+                                <table border="0" id="TenthTable" style="display:none;">
+                                    <caption>10TH Detail</caption>
+                                    <tr>      
+                                        <td>Institute Name</td>
+                                        <td>:</td>
+                                        <td> <input type="text" /></td><br />
+                                    </tr>     
+                                    <tr>            
+                                         <td>Passing Year</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                    </tr>
+                             
+                                     <tr>
+                                         <td>marks in %</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                     </tr>
+                             
+                             </table><br />
+                             
+                             
+                              <table border="0" id="twelveTable" style="display:none;">  
+                                <caption>12TH Detail</caption>
+                                <tr>
+                                         <td>Institute Name</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                </tr>
+                                         
+                                <tr>
+                                         <td>Passing Year</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                </tr>
+                                         
+                                <tr>
+                                         <td>marks in %</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                </tr>     
+                             </table><br/>
+                           
+                             
+                             
+                             
+                             
+                             
+                             <table border="0"  id="gradutionTable" style="display: none; width:320px;">
+                             <caption>Greduation Detail</caption>
+                             <tr>
+                           
+                           
+                             
+                             
+                               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select id="greduationSelect" onchange="unchangeGreduation()" >
+                                     <option value="NA">&lt;select&gt;</option>
+                                     <option value="BtechSel">B.tech/B.E</option>
+                                     <option value="BscSel">B.Sc</option>
+                                     <option value="OthersFromSelect" >others</option>
+                             
+                                  </select>
+                               </td>
+                             </tr>
+                                
+                              
+                             <table style="display: none;" id="btechTable" >
+                                 <caption>b.tech</caption>
+                                 <tr>
+                               
+                               
+                                         <td>Institute Name</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                 </tr>
+                                 <tr>
+                                         <td>Branch</td>
+                                         <td>:</td>
+                                         <td> <select>
+                                                 <option>&lt;select&gt;</option>
+                                                 <option>electrical and electronics</option>
+                                                 <option>electrical</option>
+                                                 <option>civil</option>
+                                                 <option>mechanical</option>
+                                                 <option>instumentation</option>
+                                                 <option>IT</option>
+                                                 <option>comunication</option>
+                                                 <option>computer science</option>
+                                                 <option>others</option>
+                                         
+                                           </select>
+                                       </td>
+                                 </tr>
+                                 <tr>
+                                                 <td>Passing Year</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                 </tr>
+                                 
+                                 <tr>
+                                                 <td>marks in %</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                 </tr>
+                             </table>
+                             
+                             
+                           
+                           
+                           
+                           
+                            <table style="display: none;"id="bscTable">
+                                     <caption>B.Sc</caption>
+                                     <tr>
+                                         <td>Institute Name</td>
+                                         <td>:</td>
+                                         <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>specification</td>
+                                             <td>:</td>
+                                             <td> <select>
+                                                         <option>&lt;select&gt;</option>
+                                                         <option>mathematics</option>
+                                                         <option>physics</option>
+                                                         <option>chemistry</option>
+                                                         <option>computer science</option>
+                                                         <option>others</option>
+                                             
+                                                 </select>
+                                             </td>
+                                     </tr>
+                                     <tr>
+                                             <td>Passing Year</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     
+                                     <tr>
+                                             <td>marks in %</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     
+                             </table>
+                             
+                             
+                             
+                              <table style="display: none;" id="othersTable">
+                                 <caption>others</caption>
+                                     <tr>
+                                             <td>Degre name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>Institute Name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>specification</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                                 <td>Passing Year</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                     
+                                     <tr>
+                                                 <td>marks in %</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                    
+                             </table>
+                             
+                             
+                             
+                             </table>
+                             
+                             
+                             
+                              <table style="display: none;" id="postGreduation">
+                                 <caption>Post Greduation</caption>
+                                     <tr>
+                                             <td>Degre name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>institute name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>specification</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                                 <td>passing yera</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                     
+                                     <tr>
+                                                 <td>marks in %</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                    
+                             </table>
+                              <table style="display: none;" id="otherHigherQuaTable">
+                                 <caption>Other Higher Qualification</caption>
+                                     <tr>
+                                             <td>Degre name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>institute name</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                             <td>specification</td>
+                                             <td>:</td>
+                                             <td> <input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                                 <td>passing yera</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                     
+                                     <tr>
+                                                 <td>marks in %</td>
+                                                 <td>:</td>
+                                                 <td> <input type="text" /></td>
+                                     </tr>
+                                    
+                             </table>
+          <table border="0"  width=100% >
+                          <tr>
+                             <td  align="center"bgcolor="#EBEBEB"> <input type="button" class="wbutton" onclick="check()" value="submit"/>&nbsp;&nbsp;<input type="button" class="wbutton" onclick="clr()" value="clear"/>&nbsp;&nbsp; </td>
+                           </tr> 
+                     
+                 </td>    
+                   </tr> 
+                </table>
+                
+                
+                            
+            </form>
+           </td>
+        </tr> 
+          
+    </table>
+     
+
+
+
+</table>
+</div>
+<table width=100%>
+<tr style="height: 30px;">
+        
+        <td align="right"><div class="Footer"><label style="color: white;">This Site Maintained by</label> NIST Technology Consulting Service&nbsp;</div></td>
+    </tr></table>
+</body>
+<script>
+function unchange()
+{//TenthTable twelveTable
+
+    var QualificationTable=document.getElementById("QualifiTable").value;
+     var greduationSel=document.getElementById('greduationSelect').value;
+    //alert(QualificationTable);
+    var table;
+    var table2;
+    var table3;
+    if(QualificationTable=='10')
+    {
+        table=document.getElementById("TenthTable");
+       // alert(table);
+        table.style.display="table";        
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="none";
+         table3=document.getElementById("gradutionTable");
+        table3.style.display="none"; 
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="none";
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="none";  
+         table2=document.getElementById("postGreduation");        
+        table2.style.display="none";
+        //alert(table);
+        table2=document.getElementById("otherHigherQuaTable");        
+        table2.style.display="none";
+    }
+    else if(QualificationTable=='12'){
+        table=document.getElementById("TenthTable");
+        table.style.display="table";
+        table2=document.getElementById("twelveTable");
+        table2.style.display="table";
+         table3=document.getElementById("gradutionTable");
+        table3.style.display="none";
+         table2=document.getElementById("postGreduation");        
+        table2.style.display="none";
+        //alert(table);
+        table2=document.getElementById("otherHigherQuaTable");        
+        table2.style.display="none";
+    }
+    else if(QualificationTable=='greduation')
+    {
+        table3=document.getElementById("gradutionTable");        
+        table3.style.display="table"; 
+        table=document.getElementById("TenthTable");
+        //alert(table);
+        table.style.display="table";        
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="table"; 
+        //alert(table);
+         table2=document.getElementById("postGreduation");        
+        table2.style.display="none";
+        //alert(table);
+        table2=document.getElementById("otherHigherQuaTable");        
+        table2.style.display="none";
+        
+        
+        
+    }
+     else if(QualificationTable=='Postgreduationselect')
+    {
+        table3=document.getElementById("gradutionTable");        
+        table3.style.display="table"; 
+        table=document.getElementById("TenthTable");
+        //alert(table);
+        table.style.display="table";        
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="table"; 
+        //alert(table);
+        table2=document.getElementById("postGreduation");        
+        table2.style.display="table";
+        //alert(table);
+        table2=document.getElementById("otherHigherQuaTable");        
+        table2.style.display="none";
+        
+        
+        
+    }
+     else if(QualificationTable=='HigherQualificationSelect')
+    {
+        table3=document.getElementById("gradutionTable");        
+        table3.style.display="table"; 
+        table=document.getElementById("TenthTable");
+        //alert(table);
+        table.style.display="table";        
+        table2=document.getElementById("twelveTable");        
+        table2.style.display="table"; 
+        table2=document.getElementById("postGreduation");        
+        table2.style.display="table";
+        //alert(table);
+        table2=document.getElementById("otherHigherQuaTable");        
+        table2.style.display="table";
+        
+        
+    }
+    
+    
+    
+    
+    if(QualificationTable!='greduation'||QualificationTable!='Postgreduationselect'||QualificationTable!='HigherQualificationSelect')
+       {
+      if(greduationSel=='BtechSel')
+       {
+        
+       table=document.getElementById('bscTable');
+        table.style.display="none";
+        table=document.getElementById('btechTable');
+        table.style.display="none";
+        
+        table=document.getElementById('othersTable');
+        table.style.display="none";
+       }
+       if(greduationSel=='BscSel')
+       {
+        
+       table=document.getElementById('bscTable');
+        table.style.display="none";
+        table=document.getElementById('btechTable');
+        table.style.display="none";
+        
+        table=document.getElementById('othersTable');
+        table.style.display="none";
+       }
+       if(greduationSel=='OthersFromSelect')
+       {
+        
+       table=document.getElementById('bscTable');
+        table.style.display="none";
+        table=document.getElementById('btechTable');
+        table.style.display="none";
+        
+        table=document.getElementById('othersTable');
+        table.style.display="none";
+       }
+       }
+        if(QualificationTable=='greduation'||QualificationTable=='Postgreduationselect'||QualificationTable=='HigherQualificationSelect')
+       {
+        unchangeGreduation()
+       }
+    }
+    function unchangeGreduation()
+    {
+       // gradutionTable
+       //alert("btech");
+       //var greduation
+       //greduationSelect
+       var QualificationTable=document.getElementById("QualifiTable").value;
+       if(QualificationTable=='greduation'||QualificationTable=='Postgreduationselect'||QualificationTable=='HigherQualificationSelect')
+       {
+       var greduationSel=document.getElementById('greduationSelect').value;
+       var table;
+        
+       if(greduationSel=='BtechSel')
+       {
+       
+        table=document.getElementById('bscTable');
+        table.style.display="none";
+         table=document.getElementById('btechTable');
+        table.style.display="table";
+        table=document.getElementById('othersTable')
+        table.style.display="none";
+        
+       }
+       else  if(greduationSel=='BscSel')
+       {
+        table=document.getElementById('bscTable');
+        table.style.display="table";
+        table=document.getElementById('btechTable');
+        table.style.display="none";
+        
+        table=document.getElementById('othersTable')
+        table.style.display="none";
+        
+       }
+       //others othersTable
+        else if(greduationSel=='OthersFromSelect')
+       {
+       
+        table=document.getElementById('bscTable');
+        table.style.display="none";
+        table=document.getElementById('btechTable');
+        table.style.display="none";
+        
+        table=document.getElementById('othersTable');
+        table.style.display="table";
+        //alert("")
+        
+        
+       }
+       }
+      
+    }
+
+
+
+</script>
+</html>
